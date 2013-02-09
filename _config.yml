@@ -5,6 +5,7 @@ permalink: /:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
+paginate: 5
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -72,7 +73,7 @@ JB :
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
-  about_path: /about.html
+  #about_path: /about.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -123,4 +124,5 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+
   
