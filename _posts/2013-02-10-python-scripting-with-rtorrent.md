@@ -22,3 +22,5 @@ I concluded that I had some kind of syntax error. The “$d.get_base_path=” pa
  or rather, it got me confused. I fooled around for a while and ultimately I found something that acually worked! Behold:
 
 	system.method.set_key=event.download.finished,my_script,"execute={python,~/code/my_script.py,$d.get_base_path=}"
+
+PS. If any of you are interested in the actual script, it's available on [gist](https://gist.github.com/jsh0rty/4743181)
