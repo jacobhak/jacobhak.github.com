@@ -11,8 +11,4 @@ Hopefully you'll find something of interest on this site, where I'll post stuff 
 
 If you want to learn more about me, there will be more info on this site in the near future. For now, contact me:
 
-**Jacob Håkansson**
-* E-mail <jacobhakansson@gmail.com>
-* Github [{{site.author.github}}](http://gihub.com/{{site.author.github}})
-* Twitter [{{site.author.twitter}}](http://twitter.com/{{site.author.twitter}})
-
+{% include contact_box.html %}

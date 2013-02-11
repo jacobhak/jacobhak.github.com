@@ -7,13 +7,13 @@ tagline:
 
 <div class="span8">
 {% for post in paginator.posts %}
+  <div class="content">
   <p class="author">
     <span class="date">{{post.date| date_to_long_string}}</span>
   </p>
   <h1><a class="brand" href="{{ post.url }}">{{ post.title }}</a></h1>
   <h5>{{post.description}}</h5>
 
-  <div class="content">
     {{ post | only_first_p }}
   </div>
 {% endfor %}
