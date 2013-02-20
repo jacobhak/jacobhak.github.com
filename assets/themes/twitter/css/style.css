@@ -36,7 +36,7 @@ html, body {
   border: 0;
 }
 
-ul > a {
+div .content ul a {
 	border-bottom: 1px dotted;
 }
 
