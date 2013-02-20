@@ -4,13 +4,35 @@
  <title>Jacob Håkansson</title>
  <link href="http://jsh0rty.github.com/atom.xml" rel="self"/>
  <link href="http://jsh0rty.github.com"/>
- <updated>2013-02-11T01:26:33+01:00</updated>
+ <updated>2013-02-20T17:50:52+01:00</updated>
  <id>http://jsh0rty.github.com</id>
  <author>
    <name>Jacob Håkansson</name>
    <email>jacobhakansson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Pushover notification from rtorrent</title>
+   <link href="http://jsh0rty.github.com/2013/02/20/pushover-notification-from-rtorrent"/>
+   <updated>2013-02-20T00:00:00+01:00</updated>
+   <id>http://jsh0rty.github.com/2013/02/20/pushover-notification-from-rtorrent</id>
+   <content type="html">&lt;p&gt;A friend recommended &lt;a href='https://pushover.net'&gt;Pushover&lt;/a&gt; today. It&amp;#8217;s a service which let you build applications, scripts or whatever that sends push notifications to your mobile devices. My first experimentation with Pushover was to send a notification whenever a torrent finished downloading in rtorrent. All in the name of automation! Here&amp;#8217;s what you need to do:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Register for &lt;a href='https://pushover.net'&gt;Pushover&lt;/a&gt;, and download the app(s)&lt;/li&gt;
+
+&lt;li&gt;Download and edit &lt;a href='https://gist.github.com/jsh0rty/4996785'&gt;this&lt;/a&gt; script to suit your needs&lt;/li&gt;
+
+&lt;li&gt;Put the following line in your rtorrent.rc file:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;system.method.set_key=event.download.finished,notificationscript,&amp;quot;execute={ruby,/Path/To/rtorrent-notification.rb,$d.get_name=}&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will award you with a notification with the torrents name, pretty sweet!&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Python scripting with rtorrent</title>

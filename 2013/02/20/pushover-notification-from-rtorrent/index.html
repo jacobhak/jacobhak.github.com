@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Tags</title>
-    
+    <title>Pushover notification from rtorrent</title>
+    <meta name="description" content="Get Pushover notifications when your rtorrent torrents finish downloading">
     <meta name="author" content="Jacob Håkansson">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -77,7 +77,7 @@
     
       
       	
-      	<li class="active"><a href="/tags.html" class="active">Tags</a></li>
+      	<li><a href="/tags.html">Tags</a></li>
       	
       
     
@@ -95,27 +95,67 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Tags </h1>
+  <h1>Pushover notification from rtorrent</h1>
+  <h5> Get Pushover notifications when your rtorrent torrents finish downloading</h5>
 </div>
 
 <div class="row">
   <div class="span8">
+    <p>A friend recommended <a href='https://pushover.net'>Pushover</a> today. It&#8217;s a service which let you build applications, scripts or whatever that sends push notifications to your mobile devices. My first experimentation with Pushover was to send a notification whenever a torrent finished downloading in rtorrent. All in the name of automation! Here&#8217;s what you need to do:</p>
+
+<ul>
+<li>Register for <a href='https://pushover.net'>Pushover</a>, and download the app(s)</li>
+
+<li>Download and edit <a href='https://gist.github.com/jsh0rty/4996785'>this</a> script to suit your needs</li>
+
+<li>Put the following line in your rtorrent.rc file:</li>
+</ul>
+
+<p>Code:</p>
+
+<pre><code>system.method.set_key=event.download.finished,notificationscript,&quot;execute={ruby,/Path/To/rtorrent-notification.rb,$d.get_name=}&quot;</code></pre>
+
+<p>This will award you with a notification with the torrents name, pretty sweet!</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2013/02/10/python-scripting-with-rtorrent" title="Python scripting with rtorrent">&larr; Previous</a></li>
+      
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
     
 
-<ul class="tag_box inline">
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 323622
+    });
+</script>
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>20 February 2013</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
     
-  
+    
 
 
   
-     
-    	<li><a href="/tags.html#Python-ref">Python <span>1</span></a></li>
      
     	<li><a href="/tags.html#rtorrent-ref">rtorrent <span>2</span></a></li>
-     
-    	<li><a href="/tags.html#Plex-ref">Plex <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#XBMC-ref">XBMC <span>1</span></a></li>
      
     	<li><a href="/tags.html#Ruby-ref">Ruby <span>1</span></a></li>
      
@@ -125,142 +165,10 @@
 
 
 
-</ul>
-
-
- 
-  <h2 id="Python-ref">Python</h2>
-  <ul>
-      
+    </ul>
     
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/02/10/python-scripting-with-rtorrent">Python scripting with rtorrent</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="rtorrent-ref">rtorrent</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/02/20/pushover-notification-from-rtorrent">Pushover notification from rtorrent</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/2013/02/10/python-scripting-with-rtorrent">Python scripting with rtorrent</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="Plex-ref">Plex</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/02/10/python-scripting-with-rtorrent">Python scripting with rtorrent</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="XBMC-ref">XBMC</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/02/10/python-scripting-with-rtorrent">Python scripting with rtorrent</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="Ruby-ref">Ruby</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/02/20/pushover-notification-from-rtorrent">Pushover notification from rtorrent</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="Pushover-ref">Pushover</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/02/20/pushover-notification-from-rtorrent">Pushover notification from rtorrent</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
-
-
   </div>
 </div>
-
 
 
       </div>

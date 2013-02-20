@@ -7,4 +7,5 @@ http://jsh0rty.github.com/pages.html
 http://jsh0rty.github.com/sitemap.txt
 http://jsh0rty.github.com/tags.html
 
+http://jsh0rty.github.com/2013/02/20/pushover-notification-from-rtorrent
 http://jsh0rty.github.com/2013/02/10/python-scripting-with-rtorrent
