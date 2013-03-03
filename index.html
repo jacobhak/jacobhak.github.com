@@ -5,9 +5,9 @@ tagline:
 ---
 {% include JB/setup %}
 
-<div class="span9">
+
 {% for post in paginator.posts %}
-  <div class="content">
+  <div class="content" style="width: auto">
   <p class="author">
     <span class="date">{{post.date| date_to_long_string}}</span>
   </p>
@@ -16,9 +16,10 @@ tagline:
 
     {{ post | only_first_p }}
   </div>
+  <hr>
 {% endfor %}
 
-<hr>
+
 <div class="pagination">
   <ul>
   {% if paginator.previous_page %}
@@ -31,4 +32,3 @@ tagline:
 </ul>
 </div>
 </hr>
-</div>
