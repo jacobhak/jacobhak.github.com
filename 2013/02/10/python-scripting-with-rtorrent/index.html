@@ -94,7 +94,7 @@
 </div>
 
 <div class="row">
-  <div class="span8">
+  <div class="span10">
     <p>I got some headache over some rtorrent scripting recently. I was trying to run a python script when rtorrent had finished downloading a torrent. There are a lot of threads on the web with help on this, but none covered what I was trying to do very well. I followed this <a href='https://wiki.archlinux.org/index.php/RTorrent#Manage_completed_files'>wiki entry</a> and managed to come up with this line in my .rtorrent.rc:</p>
 
 <pre><code>system.method.set_key=event.download.finished,my_script,&quot;execute=python,~/code/myscript.py,$d.get_base_path=&quot;</code></pre>
