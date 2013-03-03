@@ -1,7 +1,6 @@
 
 http://jsh0rty.github.com/about.html
 http://jsh0rty.github.com/atom.xml
-http://jsh0rty.github.com/categories.html
 http://jsh0rty.github.com/index.html
 http://jsh0rty.github.com/pages.html
 http://jsh0rty.github.com/sitemap.txt
