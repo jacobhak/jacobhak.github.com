@@ -5,7 +5,7 @@ tagline:
 ---
 {% include JB/setup %}
 
-
+<div class="span8">
 {% for post in paginator.posts %}
   <div class="content" style="width: auto">
   <p class="author">
@@ -32,3 +32,8 @@ tagline:
 </ul>
 </div>
 </hr>
+</div>
+<div class="span3 hidden-phone">
+<a class="twitter-timeline" href="https://twitter.com/j_shorty" data-widget-id="313910855446167552">Tweets by @j_shorty</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
