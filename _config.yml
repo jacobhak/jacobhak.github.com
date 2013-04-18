@@ -15,8 +15,8 @@ tagline: What happens next?
 author :
   name : Jacob Håkansson
   email : jacobhakansson@gmail.com
-  github : jsh0rty
-  twitter : j_shorty
+  github : jacobhak
+  twitter : jacob_hak
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -26,7 +26,7 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://jsh0rty.github.com
+production_url : http://jacobhak.github.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
