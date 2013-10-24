@@ -23,4 +23,4 @@ I concluded that I had some kind of syntax error. The “$d.get_base_path=” pa
 
 	system.method.set_key=event.download.finished,my_script,"execute={python,~/code/my_script.py,$d.get_base_path=}"
 
-PS. If any of you are interested in the actual script, it's available on [gist](https://gist.github.com/jsh0rty/4743181)
+PS. If any of you are interested in the actual script, it's available in this [gist](https://gist.github.com/jacobhak/4743181)

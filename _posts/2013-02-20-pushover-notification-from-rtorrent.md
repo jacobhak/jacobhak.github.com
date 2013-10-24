@@ -13,7 +13,7 @@ My first experimentation with Pushover was to send a notification whenever a tor
 All in the name of automation! Here's what you need to do:
 
 * Register for [Pushover](https://pushover.net), and download the app(s)
-* Download and edit [this](https://gist.github.com/jsh0rty/4996785) script to suit your needs
+* Download and edit [this](https://gist.github.com/jacobhak/4996785) script to suit your needs
 * Put the following line in your rtorrent.rc file:
 
 Code:
