@@ -4,7 +4,7 @@
  <title>Jacob Håkansson</title>
  <link href="http://jsh0rty.github.com/atom.xml" rel="self"/>
  <link href="http://jsh0rty.github.com"/>
- <updated>2013-03-26T17:19:32+01:00</updated>
+ <updated>2013-10-23T22:05:33-07:00</updated>
  <id>http://jsh0rty.github.com</id>
  <author>
    <name>Jacob Håkansson</name>
@@ -15,14 +15,14 @@
  <entry>
    <title>Pushover notification from rtorrent</title>
    <link href="http://jsh0rty.github.com/2013/02/20/pushover-notification-from-rtorrent"/>
-   <updated>2013-02-20T00:00:00+01:00</updated>
+   <updated>2013-02-20T00:00:00-08:00</updated>
    <id>http://jsh0rty.github.com/2013/02/20/pushover-notification-from-rtorrent</id>
    <content type="html">&lt;p&gt;A friend recommended &lt;a href='https://pushover.net'&gt;Pushover&lt;/a&gt; today. It&amp;#8217;s a service which let you build applications, scripts or whatever that sends push notifications to your mobile devices. My first experimentation with Pushover was to send a notification whenever a torrent finished downloading in rtorrent. All in the name of automation! Here&amp;#8217;s what you need to do:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Register for &lt;a href='https://pushover.net'&gt;Pushover&lt;/a&gt;, and download the app(s)&lt;/li&gt;
 
-&lt;li&gt;Download and edit &lt;a href='https://gist.github.com/jsh0rty/4996785'&gt;this&lt;/a&gt; script to suit your needs&lt;/li&gt;
+&lt;li&gt;Download and edit &lt;a href='https://gist.github.com/jacobhak/4996785'&gt;this&lt;/a&gt; script to suit your needs&lt;/li&gt;
 
 &lt;li&gt;Put the following line in your rtorrent.rc file:&lt;/li&gt;
 &lt;/ul&gt;
@@ -37,7 +37,7 @@
  <entry>
    <title>Python scripting with rtorrent</title>
    <link href="http://jsh0rty.github.com/2013/02/10/python-scripting-with-rtorrent"/>
-   <updated>2013-02-10T00:00:00+01:00</updated>
+   <updated>2013-02-10T00:00:00-08:00</updated>
    <id>http://jsh0rty.github.com/2013/02/10/python-scripting-with-rtorrent</id>
    <content type="html">&lt;p&gt;I got some headache over some rtorrent scripting recently. I was trying to run a python script when rtorrent had finished downloading a torrent. There are a lot of threads on the web with help on this, but none covered what I was trying to do very well. I followed this &lt;a href='https://wiki.archlinux.org/index.php/RTorrent#Manage_completed_files'&gt;wiki entry&lt;/a&gt; and managed to come up with this line in my .rtorrent.rc:&lt;/p&gt;
 
@@ -57,7 +57,7 @@
 
 &lt;pre&gt;&lt;code&gt;system.method.set_key=event.download.finished,my_script,&amp;quot;execute={python,~/code/my_script.py,$d.get_base_path=}&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;PS. If any of you are interested in the actual script, it&amp;#8217;s available on &lt;a href='https://gist.github.com/jsh0rty/4743181'&gt;gist&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;PS. If any of you are interested in the actual script, it&amp;#8217;s available in this &lt;a href='https://gist.github.com/jacobhak/4743181'&gt;gist&lt;/a&gt;&lt;/p&gt;</content>
  </entry>
  
  
