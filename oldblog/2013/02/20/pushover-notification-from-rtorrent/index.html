@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pushover notification from rtorrent</title>
+    <meta name="description" content="Get Pushover notifications when your rtorrent torrents finish downloading">
+    <meta name="author" content="Jacob Håkansson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Jacob Håkansson</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Pushover notification from rtorrent</h1>
+  <h5> Get Pushover notifications when your rtorrent torrents finish downloading</h5>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>A friend recommended <a href='https://pushover.net'>Pushover</a> today. It&#8217;s a service which let you build applications, scripts or whatever that sends push notifications to your mobile devices. My first experimentation with Pushover was to send a notification whenever a torrent finished downloading in rtorrent. All in the name of automation! Here&#8217;s what you need to do:</p>
+
+<ul>
+<li>Register for <a href='https://pushover.net'>Pushover</a>, and download the app(s)</li>
+
+<li>Download and edit <a href='https://gist.github.com/jacobhak/4996785'>this</a> script to suit your needs</li>
+
+<li>Put the following line in your rtorrent.rc file:</li>
+</ul>
+
+<p>Code:</p>
+
+<pre><code>system.method.set_key=event.download.finished,notificationscript,&quot;execute={ruby,/Path/To/rtorrent-notification.rb,$d.get_name=}&quot;</code></pre>
+
+<p>This will award you with a notification with the torrents name, pretty sweet!</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2013/02/10/python-scripting-with-rtorrent" title="Python scripting with rtorrent">&larr; Previous</a></li>
+      
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 323622
+    });
+</script>
+
+
+
+  </div>
+  
+  <div class="span2">
+    <h4>Published</h4>
+    <div class="date"><span>20 February 2013</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#rtorrent-ref">rtorrent <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#Ruby-ref">Ruby <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Pushover-ref">Pushover <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Jacob Håkansson 2013
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

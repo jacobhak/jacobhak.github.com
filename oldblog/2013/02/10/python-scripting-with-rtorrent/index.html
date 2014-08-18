@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Python scripting with rtorrent</title>
+    <meta name="description" content="Solution to moving and sorting files downloaded with rtorrent">
+    <meta name="author" content="Jacob Håkansson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Jacob Håkansson</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Python scripting with rtorrent</h1>
+  <h5> Solution to moving and sorting files downloaded with rtorrent</h5>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>I got some headache over some rtorrent scripting recently. I was trying to run a python script when rtorrent had finished downloading a torrent. There are a lot of threads on the web with help on this, but none covered what I was trying to do very well. I followed this <a href='https://wiki.archlinux.org/index.php/RTorrent#Manage_completed_files'>wiki entry</a> and managed to come up with this line in my .rtorrent.rc:</p>
+
+<pre><code>system.method.set_key=event.download.finished,my_script,&quot;execute=python,~/code/myscript.py,$d.get_base_path=&quot;</code></pre>
+
+<p>but that just rewarded me with this helpful error message:</p>
+
+<pre><code>Event &#39;event.download.finished&#39; failed: Could not find &#39;=&#39;.</code></pre>
+
+<p>I concluded that I had some kind of syntax error. The “$d.get_base_path=” part was supposed to give me the full path to the downloaded file (This was a guess from my part, as these commands are very poorly documented). That was supposed to be the first and only parameter to my python script. It was this line from the earlier mentioned wiki that got me thinking:</p>
+
+<blockquote>
+<p>“&#8230; is the name of our script (or whatever command you want to execute) followed by a comma separated list of all the switches/arguments to be passed.” (referring to the equivalent of myscript.py)</p>
+</blockquote>
+
+<p>or rather, it got me confused. I fooled around for a while and ultimately I found something that acually worked! Behold:</p>
+
+<pre><code>system.method.set_key=event.download.finished,my_script,&quot;execute={python,~/code/my_script.py,$d.get_base_path=}&quot;</code></pre>
+
+<p>PS. If any of you are interested in the actual script, it&#8217;s available in this <a href='https://gist.github.com/jacobhak/4743181'>gist</a></p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      
+      
+        <li class="next"><a href="/2013/02/20/pushover-notification-from-rtorrent" title="Pushover notification from rtorrent">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 323622
+    });
+</script>
+
+
+
+  </div>
+  
+  <div class="span2">
+    <h4>Published</h4>
+    <div class="date"><span>10 February 2013</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#Python-ref">Python <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#rtorrent-ref">rtorrent <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#Plex-ref">Plex <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#XBMC-ref">XBMC <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Jacob Håkansson 2013
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
